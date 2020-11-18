@@ -21,6 +21,15 @@ class Student {
 		}
 	
 	public:
+		const size_t& getMonth() {
+			return month;
+		}
+		const size_t& getYear() {
+			return year;
+		}
+		const size_t& getDay() {
+			return day;
+		}
 		void setMonth(const size_t& month_) {
 			if (month_ >= 1 && month_ <= 12)
 			{
@@ -95,6 +104,15 @@ class Student {
 			cout << "Country: " << country <<endl;
 			cout << "Number of group: " << number_group << endl;
 		}
+		const string & getCity() {
+			return city;
+		}
+		const string& getCountry() {
+			return country;
+		}
+		const size_t& getNumberGroup() {
+			return number_group;
+		}
 		void setCity(const string & city_) {
 			if (!isDigit(city_.length(), city_))
 			{
@@ -133,6 +151,24 @@ private:
 	Date birth;
 	EducationPlace place;
 public:
+	const string& getName() {
+		return name;
+	}
+	const string& getSurname() {
+		return surname;
+	}
+	const string& getFathername() {
+		return fathername;
+	}
+	const string& getPhone() {
+		return phone;
+	}
+	const string& getCity() {
+		return city;
+	}
+	const string& getCountry() {
+		return country;
+	}
 	void setName(const string & name_) {
 		if (!name_.empty())
 		{
