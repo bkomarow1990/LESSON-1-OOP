@@ -6,10 +6,12 @@ bool isDigit(const size_t& SIZE_, const string& string_) {
 	{
 		if (!isdigit(string_[i]))
 		{
-			return false;
+		}
+		else {
+			return true;
 		}
 	}
-	return true;
+	return false;
 }
 class Student {
 	// start Class Date in Class Student
@@ -37,13 +39,13 @@ class Student {
 			}
 		}
 		void setYear(const size_t& year_) {
-			if (year_ < CURRENT_YEAR && year_ < OLDEST_YEAR) {
+			if (year_ < CURRENT_YEAR && year_ > OLDEST_YEAR) {
 				year = year_;
 			}
 		}
-		void setDay(size_t& day_) {
+		void setDay(const size_t& day_) {
 			size_t dayInMonth[]{ 31,28,31,30,31,30,31,31,30,31,30,31 };
-			if (day >= 1 && day <= dayInMonth[month - 1])
+			if (day_ >= 1 && day_ <= dayInMonth[month - 1])
 			{
 				day = day_;
 			}
